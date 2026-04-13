@@ -378,6 +378,65 @@
       font-size: 1.5rem;
     }
   }
+
+  @media (max-width: 480px) {
+  .page {
+    padding: 16px 14px 36px;
+  }
+
+  .envelope-box {
+    padding: 14px;
+  }
+
+  .notes,
+  .closing {
+    padding: 16px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .btn {
+    font-size: 0.92rem;
+    padding: 13px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .envelope {
+    height: 280px;
+  }
+
+  .letter {
+    height: 220px;
+    bottom: -220px;
+    padding: 16px 16px 12px;
+  }
+
+  .envelope.open .letter {
+    bottom: 12px;
+  }
+
+  .letter h2 {
+    font-size: 1.1rem;
+  }
+
+  .letter p {
+    font-size: 0.68rem;
+    line-height: 1.55;
+  }
+
+  .hint {
+    font-size: 0.88rem;
+  }
+}
+
 </style>
 
 
@@ -478,7 +537,7 @@
     const sparklesContainer = document.getElementById("sparkles");
     const petalColors = ["var(--petal-1)", "var(--petal-2)", "var(--petal-3)"];
 
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < 46; i++) {
       const petal = document.createElement("div");
       petal.className = "petal";
       petal.style.left = Math.random() * 100 + "vw";
