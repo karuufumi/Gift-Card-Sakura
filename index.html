@@ -483,14 +483,23 @@
 
 .twinkle {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
+  width: 18px;
+  height: 18px;
+  clip-path: polygon(
+    50% 0%,
+    61% 39%,
+    100% 50%,
+    61% 61%,
+    50% 100%,
+    39% 61%,
+    0% 50%,
+    39% 39%
+  );
+  background: rgba(255, 255, 255, 0.98);
   box-shadow:
-    0 0 12px rgba(255, 255, 255, 0.9),
-    0 0 24px rgba(255, 220, 235, 0.55);
-  animation: twinkleSoft 3.2s ease-in-out infinite;
+    0 0 12px rgba(255,255,255,0.95),
+    0 0 28px rgba(255,220,235,0.8);
+  animation: twinkleSoft 1.8s ease-in-out infinite;
 }
 
 @keyframes twinkleSoft {
@@ -607,7 +616,7 @@
     const sparklesContainer = document.getElementById("sparkles");
     const petalColors = ["var(--petal-1)", "var(--petal-2)", "var(--petal-3)"];
 
-    for (let i = 0; i < 160; i++) {
+    for (let i = 0; i < 180; i++) {
       const petal = document.createElement("div");
       petal.className = "petal";
       petal.style.left = Math.random() * 100 + "vw";
@@ -618,18 +627,17 @@
       sparklesContainer.appendChild(petal);
     }
 
-    const twinkleLayer = document.getElementById("twinkles");
+const twinkleLayer = document.getElementById("twinkles");
 
 for (let i = 0; i < 90; i++) {
   const t = document.createElement("div");
   t.className = "twinkle";
   t.style.left = Math.random() * 100 + "vw";
   t.style.top = Math.random() * 100 + "vh";
-  t.style.animationDelay = Math.random() * 4 + "s";
-  t.style.animationDuration = 3 + Math.random() * 3 + "s";
+  t.style.animationDelay = Math.random() * 2 + "s";
+  t.style.animationDuration = 1.6 + Math.random() * 1.2 + "s";
   twinkleLayer.appendChild(t);
 }
-
 
   </script>
 </body>
